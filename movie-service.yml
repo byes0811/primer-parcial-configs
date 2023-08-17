@@ -1,5 +1,8 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
+
+idRandom: ${random.value}
+
 spring:
   application:
     name: movie-service
@@ -15,6 +18,8 @@ spring:
 
 eureka:
   instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
