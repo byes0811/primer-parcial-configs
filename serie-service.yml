@@ -5,7 +5,7 @@ idRandom: ${random.value}
 
 spring:
   application:
-    name: movie-service
+    name: serie-service
   mongodb:
     embedded:
       version: 4.0.2
