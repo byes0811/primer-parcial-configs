@@ -6,14 +6,15 @@ idRandom: ${random.value}
 spring:
   application:
     name: serie-service
-  mongodb:
-    embedded:
-      version: 4.0.2
   data:
     mongodb:
       database: test
       port: 27017
-
+  mongodb:
+    embedded:
+      enabled: true
+      version: 4.0.2
+      
 eureka:
   instance:
     hostname: localhost
